@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="TestXSL.xsl" ?>
+<?xml-stylesheet type="text/xsl"?>
 <TEST>
-    <name>Test XSL Scripting</name>
 </TEST>
