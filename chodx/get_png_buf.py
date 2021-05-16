@@ -1,6 +1,5 @@
 import numpy as np
 from PIL import Image
-import argparse
 import sys
 
 
@@ -34,3 +33,8 @@ def main():
         print('Restore to image')
 if __name__ == "__main__":
     main()
+
+
+# pip install pillow numpy
+# --extract path_to_watermark_image
+# --restore path_to_buffer
