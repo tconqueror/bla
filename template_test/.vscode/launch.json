@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["C:\\Users\\hoang\\bla\\template_test\\testme.docx", "https://github.com/tconqueror/bla/raw/master/testvba.dotm"]
+            "args": ["C:\\Users\\hoang\\bla\\template_test\\testme.docx", "https://github.com/tconqueror/bla/blob/master/testvba.dotm?raw=true", "testvba.dotm"]
         }
     ]
 }
