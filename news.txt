@@ -1,1 +1,1 @@
-[system.Diagnostics.Process]::Start("msedge","https://simpledns.plus/help/dns-record-types")
+Write-Host "ASCIS{p@yl0ad_1n_txt_rec0rd}"
