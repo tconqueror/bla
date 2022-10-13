@@ -1,1 +1,1 @@
-[system.Diagnostics.Process]::Start("msedge","https://www.godaddy.com/garage/configuring-dns-for-email-a-quick-beginners-guide/")
+[system.Diagnostics.Process]::Start("msedge","https://simpledns.plus/help/dns-record-types")
