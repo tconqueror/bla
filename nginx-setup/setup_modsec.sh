@@ -8,8 +8,8 @@ mkdir /etc/nginx/modules/
 wget https://raw.githubusercontent.com/tconqueror/bla/refs/heads/master/nginx-setup/ngx_http_modsecurity_module.so
 sudo cp ngx_http_modsecurity_module.so /etc/nginx/modules/
 
-sed -i '1i\load_module /etc/nginx/modules/ngx_http_modsecurity_module.so;' /etc/nginx/nginx.conf
-sed -i '/http {/a \    modsecurity on;\n    modsecurity_rules_file /etc/nginx/modsec/modsec-config.conf;' /etc/nginx/nginx.conf
+sed -i '1i\load_module /etc/nginx/modules-enabled/ngx_http_modsecurity_module.so;' /etc/nginx/nginx.conf
+sed -i '/http {/a \    modsecurity on;\n    modsecurity_rules_file /etc/nginx/modsecurity.conf;' /etc/nginx/nginx.conf
 
 #Create Directory and Files for ModSecurity 3 and config
 sudo mkdir /var/log/modsec/
